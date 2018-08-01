@@ -6,3 +6,6 @@ logs
 test/
 # dotenv environment variables file
 .env
+
+#API key
+key.txt

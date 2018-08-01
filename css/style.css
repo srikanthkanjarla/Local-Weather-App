@@ -1,0 +1,55 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 10px;
+}
+body {
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:#eee;
+    font-size: 12px;
+    /*background:url("../images/cloud_bg.jpeg") no-repeat top;*/
+}
+header {
+    /*color: #fff;
+    margin-left:3rem;*/
+     
+}
+
+footer {
+    color: #003434;
+    text-align: center;
+}
+.container{
+  display: flex;
+  
+}
+ .weather-card{
+margin:0 auto;
+
+width:640px;
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+justify-content: flex-start;
+padding:10px;
+ }
+ .weather-head{
+     flex:1 0 100%;
+  
+ }
+ .weather-temp{
+ 
+flex:1 1 50%;
+ }
+ .weather-other-data{
+ 
+flex:1 1 50%;
+ }
+ #icon{
+     width:80px;
+     height:80px;
+
+ }

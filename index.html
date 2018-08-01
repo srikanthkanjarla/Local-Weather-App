@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
+ <html class="no-js">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Local Weather App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/weather-app.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <header>
-
+        <h1>Weather App</h1>
     </header>
     <main>
+        <div class="container">
+            <div class="weather-card">
+                <div class="weather-head">
+                        <h3 id="city"></h3>
+                        <p id="local-time"></p>
+                        <p id="description"></p>
+                </div>
+                <div class="weather-temp">
+                        <p class="test"><img id="icon" src="" alt="weather-icon"> </p>
+                        <span id="temp"> </span><a href="" id="celcius">°C</a>|<a href="" id="for-heat">°F</a>
+                        <p>high_temp :</p>
+                        <p>low_temp : </p>
+                </div>
+                <div class="weather-other-data">
+<p>humidity :</p>
+<p>pressure :</p>
+<p>wind speed :</p>
 
+                </div>     
+            </div>
+        </div>
     </main>
+    <hr>
     <footer>
-
+        <p>Powered by</p>
     </footer>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <script src="js/weather.js">
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
