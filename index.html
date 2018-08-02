@@ -7,38 +7,39 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <h1>Weather App</h1>
-    </header>
-    <main>
+    <div id="app">
         <div class="container">
             <div class="weather-card">
                 <div class="weather-head">
-                        <h3 id="city"></h3>
-                        <p id="local-time"></p>
-                        <p id="description"></p>
+                        <h2 id="city"></h2>
+                        <h4 id="local-time"></h4>
+                        <!--<h4 id="description"></h4>-->
                 </div>
-                <div class="weather-temp">
-                        <p class="test"><img id="icon" src="" alt="weather-icon"> </p>
-                        <span id="temp"> </span><a href="" id="celcius">°C</a>|<a href="" id="for-heat">°F</a>
-                        <p>high_temp :</p>
-                        <p>low_temp : </p>
+                <div class="weather-icon">
+                    <p class="icon"><img id="icon" src="" alt="weather-icon"> </p>
+                    <p id="description"></p>
+                    
                 </div>
-                <div class="weather-other-data">
-<p>humidity :</p>
-<p>pressure :</p>
-<p>wind speed :</p>
-
+                <div class="weather-temp-info">                       
+                     <p><span id="temp"> </span><sup> <a href="#">°C </a> | <a href="#">°F</a> </sup></p> 
+                     <p>
+                            <i class="fas fa-arrow-up"></i> <span id="temp-high" title="Max_tempearture"></span> 
+                            <i class="fas fa-arrow-down"></i><span id="temp-low" title="Min_temperature"></span>
+                     </p>
+                </div>
+                <div class="weather-other-info">
+                    <p id="humidity">humidity :</p>
+                    <p id="pressure">pressure :</p>
+                    <p id="wind-speed">wind speed :</p>
                 </div>     
             </div>
         </div>
-    </main>
-    <hr>
-    <footer>
-        <p>Powered by</p>
-    </footer>
+      
+    </div>
+    
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->

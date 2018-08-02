@@ -3,53 +3,91 @@ body {
     margin: 0px;
     padding: 0px;
     border: 0px;
-    font-size: 10px;
+    font-size: 12px;
+    color:#161616;
 }
 body {
-    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
     background:#eee;
-    font-size: 12px;
+  
     /*background:url("../images/cloud_bg.jpeg") no-repeat top;*/
 }
-header {
-    /*color: #fff;
-    margin-left:3rem;*/
-     
-}
-
-footer {
-    color: #003434;
-    text-align: center;
-}
-.container{
-  display: flex;
-  
-}
  .weather-card{
-margin:0 auto;
-
+margin:10% auto;
+background-color: #c7c7c7;
 width:640px;
+height: 250px;
 display:flex;
-flex-direction:row;
-flex-wrap:wrap;
+flex-flow:row wrap;
 justify-content: flex-start;
-padding:10px;
+padding:20px;
+box-shadow: 0 0 12px #acacac;
  }
+
  .weather-head{
-     flex:1 0 100%;
-  
+     flex:1 1 50%;
+     text-transform: capitalize;
  }
- .weather-temp{
- 
-flex:1 1 50%;
+ .weather-icon{
+     flex:1 1 50%;
+     display:flex;
+     align-items: center;
  }
- .weather-other-data{
+ .icon{
+flex:1 1 40%;
+ }
+ #description{
+     flex:1 1 60%;
+     text-transform: capitalize;
+     font-weight: bold;
+ }
+ .weather-temp-info{
+flex:1 1 60%;
  
-flex:1 1 50%;
+ }
+ .weather-other-info{
+ 
+flex:1 1 40%;
+ }
+ #city{
+     color:#191919;
+ }
+ #temp{
+     font-size:50px;
+ }
+ sup{      
+     vertical-align: baseline;
+    position: relative;
+    top: -3.0rem;
+    font-size:15px;
+ }
+ sup a {
+     text-decoration:none;
+     font-weight: bold;
+     color:#161616;
+ }
+ #temp-high{
+margin:0 0.5rem;
+font-size:1.5rem;
+ }
+ #temp-low{
+    margin:0 0.5rem;
+    font-size:1.5rem;
+ }
+ .fa-arrow-up{
+     color:#ff6500;
+     font-size: 1.5rem;
+ }
+ .fa-arrow-down{
+     color:#003b00;
+     font-size: 1.5rem;
+ }
+ .weather-other-info{
+     text-transform:capitalize;
+     color:#161616;
+     font-weight: bold;
  }
  #icon{
-     width:80px;
-     height:80px;
-
+     height: 100px;
  }
