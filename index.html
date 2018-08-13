@@ -7,34 +7,53 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
         <div class="container">
             <div class="weather-card">
-                <div class="weather-head">
-                        <h2 id="city"></h2>
-                        <h4 id="local-time"></h4>
-                        <!--<h4 id="description"></h4>-->
-                </div>
-                <div class="weather-icon">
-                    <p class="icon"><img id="icon" src="" alt="weather-icon"> </p>
-                    <p id="description"></p>
-                    
-                </div>
-                <div class="weather-temp-info">                       
-                     <p><span id="temp"> </span><sup> <a class="temp-btn" href="#">°C </a> | <a class="temp-btn" href="#">°F</a> </sup></p> 
-                     <p>
-                            <i class="fas fa-arrow-up"></i> <span id="temp-high" title="Max_tempearture"></span> 
-                            <i class="fas fa-arrow-down"></i><span id="temp-low" title="Min_temperature"></span>
-                     </p>
-                </div>
-                <div class="weather-other-info"> 
-                    <p class="other-info"><span class="other-info-title">humidity  </span><span class="other-info-value" id="humidity"></span></p>
-                    <p class="other-info"><span class="other-info-title">pressure  </span><span class="other-info-value" id="pressure"></span></p>
-                    <p class="other-info"><span class="other-info-title">wind speed</span><span class="other-info-value" id="wind-speed"></span></p>
-                </div>     
+                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+              <div class="weather-data">
+                    <div class="weather-head">
+                            <h2 id="city"></h2>
+                            <h4 id="local-time"></h4>                             
+                    </div>
+                    <div class="weather-icon">
+                        <p class="icon"><img id="icon" src="" alt="weather-icon"> </p>
+                        <p id="description"></p>
+                        
+                    </div>
+                    <div class="weather-temp">                       
+                         <p>
+                             <span id="temp"> </span><sup> <a class="temp-btn" id="temp-unit-cel" href="">°C</a> <a class="temp-btn" id="temp-unit-fahren" href="">°F</a> </sup>
+                        </p> 
+                        <!-- <p>
+                                <i class="arrow-up"></i> <span id="temp-high" title="Max_tempearture"></span> 
+                                <i class="fas fa-arrow-down"></i><span id="temp-low" title="Min_temperature"></span>
+                         </p>-->
+                    </div>
+                    <div class="weather-other-info"> 
+                        <p class="other-info-container">
+                            <span class="other-info-title">Temp High <img src="images/icon-up.png"></span>
+                            <span id="temp-high" title="Max_tempearture"></span>                         
+                        </p>
+                        <p class="other-info-container">
+                            <span class="other-info-title">Temp Low <img src="images/icon-down.png">  </span>
+                            <span id="temp-low" title="Min_temperature"></span>                           
+                        </p>
+                        <p class="other-info-container">
+                            <span class="other-info-title">Humidity</span>
+                            <span class="other-info-value" id="humidity"></span>
+                        </p>
+                        <p class="other-info-container">
+                                <span class="other-info-title">Pressure</span>
+                                <span class="other-info-value" id="pressure"></span>
+                        </p>
+                    </div>     
+              </div>
+                
             </div>
         </div>
       
