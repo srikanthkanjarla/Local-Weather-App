@@ -1,0 +1,18 @@
+{
+    "short_name":"weather",
+    "name":"Local weather app",
+    "icons":[
+ {
+     "src":"images/icon-144x144.png",
+     "type":"png",
+     "sizes":"144x144"
+ }
+    ],
+    "start_url":"./",
+    "background_color":"yellow",
+    "display":"standalone",
+    "scope":"./",
+    "theme_color":"blue"
+    
+
+}
