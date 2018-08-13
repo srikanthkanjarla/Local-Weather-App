@@ -12,25 +12,25 @@ body {
     color:var(--primary-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:var(--bg-color);
-    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
-   /* background:#eee;*/
-  
-    /*background:url("../images/cloud_bg.jpeg") no-repeat top;*/
 }
  
- .weather-card{
+.weather-card{
 margin:10% auto;
-background-color:var(--secondary-color);
+background-color:#ffffff;
 width:640px;
 height: 250px;
+padding:20px;
+box-shadow: 0 0 12px #b3b300;
+border-radius:1rem;
 display:flex;
 flex-flow:row wrap;
 justify-content: flex-start;
-padding:20px;
-box-shadow: 0 0 12px var(--primary-color);
-border-radius:1rem;
- }
+}
 
+.weather-data{
+    display:none;
+    flex-flow:row wrap;
+}
  .weather-head{
      flex:1 1 50%;
      text-transform: capitalize;
@@ -48,24 +48,35 @@ flex:1 1 40%;
      text-transform: capitalize;
      font-weight: bold;
  }
- .weather-temp-info{
-flex:1 1 60%;
- 
+ .weather-temp{
+flex:1 1 45%;
+ }
+ .weather-temp>p{
+     text-align: center;
  }
  .weather-other-info{
  color:var(--primary-color);
-flex:1 1 40%;
+ flex:1 1 55%;
+ display:flex;
+ flex-flow:row wrap;
+ }
+ .other-info-container{
+     background:#ffffc4;
+     padding:1rem;
+     flex:0 1 40%;
+     margin:0.2rem;
+     align-self: center;
+     opacity: 0.8;
+     font-size: 0.9rem;
  }
  .other-info-title{
-     margin-right:2.2rem;
+     
      text-align: center;
+     
  }
- .other-info{
-     display:flex;
- }
- .other-info-title,.other-info-value{
-     flex:1 1 50%;
-
+ .other-info-title>img{
+     height: 20px;
+     vertical-align: middle;
  }
  
  #temp{
@@ -82,14 +93,7 @@ flex:1 1 40%;
      font-weight: bold;
     
  }
- #temp-high{
-margin:0 0.5rem;
-font-size:1.5rem;
- }
- #temp-low{
-    margin:0 0.5rem;
-    font-size:1.5rem;
- }
+ 
  .fa-arrow-up{
      color:#ff6500;
      font-size: 1.5rem;
@@ -105,3 +109,60 @@ font-size:1.5rem;
  #icon{
      height: 100px;
  }
+ .temp-btn{
+    text-decoration: none;
+    padding:8px 15px;
+    border-radius:25px;
+    color:var(--primary-color);
+ }
+ #temp-unit-cel{
+     background-color:var(--bg-color);
+ }
+ #temp-unit-fahren{
+     color:#a2c5ac;
+ }
+
+ /*
+ pure css loader from https://loading.io/css/
+ */
+ .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    align-self: center;
+    margin:auto;
+  }
+
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #fcf;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fcf transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+ 
