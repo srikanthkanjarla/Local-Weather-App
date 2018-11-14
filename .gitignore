@@ -9,3 +9,4 @@ test/
 
 #API key
 key.txt
+node_modules/
