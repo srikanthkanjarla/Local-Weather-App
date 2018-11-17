@@ -160,12 +160,14 @@ sup a {
         justify-content: initial;
         align-items: initial;
     }
+
     .header {
         text-align: center;
         padding: 0;
         background-color: #233d4d;
         color: #ffffff;
     }
+
     .weather-container {
         flex-flow: column nowrap;
         border-radius: 0;
@@ -173,31 +175,39 @@ sup a {
         width: auto;
         height: auto;
     }
+
     .location-info {
         text-align: center;
         padding: 15px 0;
     }
+
     .weather-info {
         flex-flow: column;
     }
+
     .temp-info {
         order: 1;
         flex: 1 1 auto;
         padding: 50px 0 10px 0;
     }
+
     .weather-icon {
         order: 2;
         padding: 0;
     }
+
     .additional-info {
         order: 3;
         padding: 11px 0;
     }
+
     .other-info-container {
         margin: 1rem;
     }
+
     .spinner-container {
         width: 95vw;
         height: 100vh;
         border-radius: 0;
     }
+}
