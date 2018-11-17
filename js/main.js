@@ -28,8 +28,8 @@ function updateTempInfo(data) {
 }
 
 function updateCityInfo(city, region, country) {
-  cityElement.textContent = city;
-  stateElement.textContent = region;
+  cityElement.textContent = `${city},`;
+  stateElement.textContent = `${region},`;
   countryElement.textContent = country;
 }
 function updateWeatherInfo(data) {
@@ -44,10 +44,12 @@ function onLocationSuccess(location) {
   const lon = location.coords.longitude;
   fetch(`https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${lon}`)
     .then(weatherInfo => {
-      fetch('http://ip-api.com/json')
+      // fetch('http://ip-api.com/json')
+      fetch('https://ipapi.co/json')
         .then(ipInfo => ipInfo.json())
         .then(cityData => {
-          updateCityInfo(cityData.city, cityData.regionName, cityData.country);
+          console.log(cityData);
+          updateCityInfo(cityData.city, cityData.region, cityData.country_name);
         });
       return weatherInfo.json();
     })
