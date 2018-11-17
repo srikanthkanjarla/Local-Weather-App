@@ -1,168 +1,203 @@
-:root{
-    --primary-color:#44394f;
-    --secondary-color:#9db5b2;
-    --bg-color:#a2c5ac;
-}
 html,
 body {
     margin: 0px;
     padding: 0px;
     border: 0px;
-    font-size: 12px;
-    color:var(--primary-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:var(--bg-color);
-}
- 
-.weather-card{
-margin:10% auto;
-background-color:#ffffff;
-width:640px;
-height: 250px;
-padding:20px;
-box-shadow: 0 0 12px #b3b300;
-border-radius:1rem;
-display:flex;
-flex-flow:row wrap;
-justify-content: flex-start;
+    font-size: 15px;
+    color: #494947;
+    font-family: 'Marmelad', cursive;
+    background-color: #f4f4f9;
 }
 
-.weather-data{
-    display:none;
-    flex-flow:row wrap;
+.header {
+    padding: 10px;
+    color: #233d4d;
 }
- .weather-head{
-     flex:1 1 50%;
-     text-transform: capitalize;
- }
- .weather-icon{
-     flex:1 1 50%;
-     display:flex;
-     align-items: center;
- }
- .icon{
-flex:1 1 40%;
- }
- #description{
-     flex:1 1 60%;
-     text-transform: capitalize;
-     font-weight: bold;
- }
- .weather-temp{
-flex:1 1 45%;
- }
- .weather-temp>p{
-     text-align: center;
- }
- .weather-other-info{
- color:var(--primary-color);
- flex:1 1 55%;
- display:flex;
- flex-flow:row wrap;
- }
- .other-info-container{
-     background:#ffffc4;
-     padding:1rem;
-     flex:0 1 40%;
-     margin:0.2rem;
-     align-self: center;
-     opacity: 0.8;
-     font-size: 0.9rem;
- }
- .other-info-title{
-     
-     text-align: center;
-     
- }
- .other-info-title>img{
-     height: 20px;
-     vertical-align: middle;
- }
- 
- #temp{
-     font-size:50px;
- }
- sup{      
-     vertical-align: baseline;
-    position: relative;
-    top: -3.0rem;
-    font-size:15px;
- }
- sup a {
-     text-decoration:none;
-     font-weight: bold;
-    
- }
- 
- .fa-arrow-up{
-     color:#ff6500;
-     font-size: 1.5rem;
- }
- .fa-arrow-down{
-     color:#003b00;
-     font-size: 1.5rem;
- }
- .weather-other-info{
-     text-transform:capitalize;
-     font-weight: bold;
- }
- #icon{
-     height: 100px;
- }
- .temp-btn{
-    text-decoration: none;
-    padding:8px 15px;
-    border-radius:25px;
-    color:var(--primary-color);
- }
- #temp-unit-cel{
-     background-color:var(--bg-color);
- }
- #temp-unit-fahren{
-     color:#a2c5ac;
- }
 
- /*
- pure css loader from https://loading.io/css/
- */
- .lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 64px;
-    height: 64px;
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-container {
+    background-color: #f4f4f9;
+    width: 500px;
+    height: 270px;
+    padding: 10px;
+    box-shadow: 0 0 3px 2px #cccccc;
+    border-radius: 15px;
+    display: none;
+    flex-flow: column;
+}
+
+.location-info {
+    flex: 1;
+    text-transform: capitalize;
+}
+
+.weather-info {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.weather-icon {
+    text-align: center;
+    padding: 46px 0;
+}
+
+.weather-icon img {
+    height: 80px;
+}
+
+.weather-icon p {
+    margin: 0;
+}
+
+.temp-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2 1 auto;
+}
+
+.additional-info {
+    padding: 8px 0;
+}
+
+.other-info-container {
+    background: #e7ecef;
+    box-shadow: 0 0 1px 1px #fff;
+    padding: 0.5rem;
+    flex: 0 1 40%;
+    margin: 0.1rem;
     align-self: center;
-    margin:auto;
-  }
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
 
-  .lds-ring div {
-    box-sizing: border-box;
+.other-info-title {
+    text-align: center;
+}
+
+.other-info-title>img {
+    height: 20px;
+    vertical-align: middle;
+}
+
+.other-info-value {
+    color: #0f0a0a;
+}
+
+#temp {
+    font-size: 50px;
+}
+
+sup {
+    vertical-align: baseline;
+    position: relative;
+    top: -1rem;
+    font-size: 20px;
+}
+
+sup a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.temp-btn {
+    text-decoration: none;
+    border-radius: 12px;
+    color: #9699a6;
+}
+
+#humidity {
+    margin-left: 30px;
+}
+
+#pressure {
+    margin-left: 15px;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    width: 500px;
+    height: 270px;
+    padding: 10px;
+    box-shadow: 0 0 3px 2px #cccccc;
+    border-radius: 15px;
+}
+
+.spinner {
+    display: none;
+    height: 40px;
+    width: 40px;
+    border: 5px solid;
+    border-top-color: #233d4d;
+    border-bottom-color: #233d4d;
+    border-left-color: #fc5130;
+    border-right-color: #233d4d;
     display: block;
-    position: absolute;
-    width: 51px;
-    height: 51px;
-    margin: 6px;
-    border: 6px solid #fcf;
     border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fcf transparent transparent transparent;
-  }
-  .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-  .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-  .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
+    animation: spin 2s ease infinite;
+    border-left-width: 6px;
+}
 
- 
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width:320px) and (max-width:480px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        justify-content: initial;
+        align-items: initial;
+    }
+    .header {
+        text-align: center;
+        padding: 0;
+        background-color: #233d4d;
+        color: #ffffff;
+    }
+    .weather-container {
+        flex-flow: column nowrap;
+        border-radius: 0;
+        box-shadow: none;
+        width: auto;
+        height: auto;
+    }
+    .location-info {
+        text-align: center;
+        padding: 15px 0;
+    }
+    .weather-info {
+        flex-flow: column;
+    }
+    .temp-info {
+        order: 1;
+        flex: 1 1 auto;
+        padding: 50px 0 10px 0;
+    }
+    .weather-icon {
+        order: 2;
+        padding: 0;
+    }
+    .additional-info {
+        order: 3;
+        padding: 11px 0;
+    }
+    .other-info-container {
+        margin: 1rem;
+    }
+    .spinner-container {
+        width: 95vw;
+        height: 100vh;
+        border-radius: 0;
+    }

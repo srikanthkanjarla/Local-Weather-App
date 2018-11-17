@@ -1,5 +1,6 @@
 <!DOCTYPE html>
- <html class="no-js">
+<html class="no-js">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,57 +9,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet">
 </head>
+
 <body>
-    <div id="app">
-        <div class="container">
-            <div class="weather-card">
-                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-              <div class="weather-data">
-                    <div class="weather-head">
-                            <h2 id="city"></h2>
-                            <h4 id="local-time"></h4>                             
-                    </div>
-                    <div class="weather-icon">
-                        <p class="icon"><img id="icon" src="" alt="weather-icon"> </p>
-                        <p id="description"></p>
-                        
-                    </div>
-                    <div class="weather-temp">                       
-                         <p>
-                             <span id="temp"> </span><sup> <a class="temp-btn" id="temp-unit-cel" href="">°C</a> <a class="temp-btn" id="temp-unit-fahren" href="">°F</a> </sup>
-                        </p> 
-                        <!-- <p>
-                                <i class="arrow-up"></i> <span id="temp-high" title="Max_tempearture"></span> 
-                                <i class="fas fa-arrow-down"></i><span id="temp-low" title="Min_temperature"></span>
-                         </p>-->
-                    </div>
-                    <div class="weather-other-info"> 
-                        <p class="other-info-container">
-                            <span class="other-info-title">Temp High <img src="images/icon-up.png"></span>
-                            <span id="temp-high" title="Max_tempearture"></span>                         
-                        </p>
-                        <p class="other-info-container">
-                            <span class="other-info-title">Temp Low <img src="images/icon-down.png">  </span>
-                            <span id="temp-low" title="Min_temperature"></span>                           
-                        </p>
-                        <p class="other-info-container">
-                            <span class="other-info-title">Humidity</span>
-                            <span class="other-info-value" id="humidity"></span>
-                        </p>
-                        <p class="other-info-container">
-                                <span class="other-info-title">Pressure</span>
-                                <span class="other-info-value" id="pressure"></span>
-                        </p>
-                    </div>     
-              </div>
-                
-            </div>
+    <div id="app" class="container">
+        <header class="header">
+            <h1>Weather App</h1>
+        </header>
+        <div class="spinner-container" id="loading">
+            <div class="spinner"></div>
         </div>
-      
+
+        <main class="weather-container" id="weather-data">
+            <div class="location-info">
+                <h2><span id="city"></span>, <span id="state"></span>, <span id="country"></span></h2>
+            </div>
+            <div class="weather-info">
+                <div class="weather-icon">
+                    <p><img id="icon" src="" alt="weather-icon"> </p>
+                    <p id="description"></p>
+                </div>
+                <div class="temp-info">
+                    <span id="temp"> </span>
+                    <sup> <a class="temp-btn" id="temp-unit-cel" href="">°C</a> | <a class="temp-btn" id="temp-unit-fahren"
+                            href="">°F</a> </sup>
+                </div>
+                <div class="additional-info">
+                    <p class="other-info-container">
+                        <span class="other-info-title">Temp High <img src="images/icon-up.png"></span>
+                        <span class="other-info-value" id="temp-high" title="Max tempearture"></span>
+                    </p>
+                    <p class="other-info-container">
+                        <span class="other-info-title">Temp Low <img src="images/icon-down.png"> </span>
+                        <span class="other-info-value" id="temp-low" title="Min temperature"></span>
+                    </p>
+                    <p class="other-info-container">
+                        <span class="other-info-title">Humidity</span>
+                        <span class="other-info-value" id="humidity"></span>
+                    </p>
+                    <p class="other-info-container">
+                        <span class="other-info-title">Pressure</span>
+                        <span class="other-info-value" id="pressure"></span>
+                    </p>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+
+        </footer>
     </div>
-    
+
+
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
